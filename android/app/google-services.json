@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "79182528651",
+    "project_id": "cryptowallet-deece",
+    "storage_bucket": "cryptowallet-deece.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79182528651:android:8c28612f6cb41ac866948e",
+        "android_client_info": {
+          "package_name": "com.example.cryptoappflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79182528651-12svvt76898ndgik9bn20vtosgfsdgtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDBf4zsyPX5CvTh5m4Hy5FUpJbLNMV-90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79182528651-12svvt76898ndgik9bn20vtosgfsdgtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
