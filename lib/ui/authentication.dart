@@ -1,4 +1,5 @@
 import 'package:cryptoappflutter/net/flutterFire.dart';
+import 'package:cryptoappflutter/ui/home_view.dart';
 import 'package:flutter/material.dart';
 
 class Authentication extends StatefulWidget {
@@ -61,10 +62,12 @@ class _AuthenticationState extends State<Authentication> {
                 onPressed: () async{
                   bool _registeredSuccessfully = await register(_emailController.text, _passController.text);
                   if (_registeredSuccessfully) {
-                    //TODO: navigate
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HomeView())
+                    );
                   } else {
                     //TODO: Stay on the same page
-                    
+                  
                   }
                 },
                 child: Text(
@@ -80,7 +83,17 @@ class _AuthenticationState extends State<Authentication> {
                 color: Colors.white,
               ),
               child: MaterialButton(
-                onPressed: null,
+                onPressed: () async{
+                  bool _signedinSuccessfully = await signIn(_emailController.text, _passController.text);
+                  if (_signedinSuccessfully) {
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=> HomeView())
+                    );
+                  } else {
+                    //TODO: Stay on the same page
+                  
+                  }
+                },
                 child: Text(
                   "Login"
                 ),
