@@ -24,31 +24,39 @@ class _AuthenticationState extends State<Authentication> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextFormField(
-              controller: _emailController,
-              decoration: InputDecoration(
-                hintText: "Enter your email",
-                hintStyle: TextStyle(
-                  color: Colors.white
+            Container(
+              width: MediaQuery.of(context).size.width / 1.3,
+              child: TextFormField(
+                style: TextStyle(color: Colors.white, fontSize: 20.0),
+                controller: _emailController,
+                decoration: InputDecoration(
+                  hintText: "Enter your email",
+                  hintStyle: TextStyle(
+                    color: Colors.white
+                  ),
+                  labelText: "Email",
+                  labelStyle: TextStyle(
+                    color: Colors.white
+                  )
                 ),
-                labelText: "Email",
-                labelStyle: TextStyle(
-                  color: Colors.white
-                )
               ),
             ),
-            TextFormField(
-              controller: _passController,
-              obscureText: true,
-              decoration: InputDecoration(
-                hintText: "Enter Password",
-                hintStyle: TextStyle(
-                  color: Colors.white
+            Container(
+              width: MediaQuery.of(context).size.width / 1.3,
+              child: TextFormField(
+                style: TextStyle(color: Colors.white, fontSize: 20.0),
+                controller: _passController,
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Enter Password",
+                  hintStyle: TextStyle(
+                    color: Colors.white
+                  ),
+                  labelText: "Password",
+                  labelStyle: TextStyle(
+                    color: Colors.white
+                  )
                 ),
-                labelText: "Password",
-                labelStyle: TextStyle(
-                  color: Colors.white
-                )
               ),
             ),
             Container(
