@@ -1,6 +1,7 @@
 import 'package:cryptoappflutter/net/flutterFire.dart';
 import 'package:cryptoappflutter/ui/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 
 class Authentication extends StatefulWidget {
   @override
@@ -68,6 +69,7 @@ class _AuthenticationState extends State<Authentication> {
               ),
               child: MaterialButton(
                 onPressed: () async{
+                  print("Processing.....");
                   bool _registeredSuccessfully = await register(_emailController.text, _passController.text);
                   if (_registeredSuccessfully) {
                     Navigator.push(context,
@@ -75,7 +77,7 @@ class _AuthenticationState extends State<Authentication> {
                     );
                   } else {
                     //TODO: Stay on the same page
-                  
+                    Toast.show("Something went wrong!🤔", context, duration: Toast.LENGTH_SHORT, gravity: Toast.BOTTOM);
                   }
                 },
                 child: Text(
@@ -92,14 +94,16 @@ class _AuthenticationState extends State<Authentication> {
               ),
               child: MaterialButton(
                 onPressed: () async{
+                  print("Logging in......");
                   bool _signedinSuccessfully = await signIn(_emailController.text, _passController.text);
                   if (_signedinSuccessfully) {
+                    Toast.show("Welcome!", context, duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
                     Navigator.push(context,
                       MaterialPageRoute(builder: (context)=> HomeView())
                     );
                   } else {
                     //TODO: Stay on the same page
-                  
+                    Toast.show("Something went wrong!🤔", context, duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
                   }
                 },
                 child: Text(

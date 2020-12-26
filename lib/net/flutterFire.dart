@@ -8,6 +8,7 @@ Future<bool> signIn(String email, String password) async {
         email: email,
         password: password
       );
+      print("User found!!");
   return true;
   } on FirebaseAuthException catch (e) {
   if (e.code == 'user-not-found') {
